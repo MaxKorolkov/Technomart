@@ -565,26 +565,124 @@ footer {
 	background-color: #ba2732;
 }
 
+.category-items {
+	margin-bottom: 35px;
+}
+
 .popular-header {
 	background-color: #f7f3ec;
+	margin-bottom: 20px;
 }
 
  	.popular-header h2 {
- 		width: 65%;
+ 		display: block;
+ 		width: 60%;
  		float: left;
+ 		font-size: 30px;
+ 		line-height: 30px;
+ 		font-weight: normal;
+ 		text-transform: uppercase;
+ 		margin: 30px;
+ 		margin-right: 0;
  	}
 
   .popular-header .btn-popular {
- 		width: 35%;
+ 		width: 253px;
  		float: right;
+ 		margin-top: 25px;
+ 		margin-right: 24px;
+ 		background-color: #ee3643;
  	}
 
+ 	.btn-popular:hover {
+ 		background-color: #ca2c37;
+ 	}
+
+ 	.btn-popular:active {
+ 		background-color: #ba2732;
+ 	}
+
+ .popular-items {
+ 	margin-bottom: 20px;
+ }
+
 .catalog-item {
+	position: relative;
  	float: left;
- 	width: 220px;
- 	height: 316px; /* Временно */
- 	outline: 1px solid red;
+ 	width: 218px;
+	min-height: 316px;
+	border: 1px solid #e5e5e5;
+ 	margin-right: 20px;
 }
+
+.catalog-item:nth-child(4n) {
+	margin-right: 0;
+}
+
+	.catalog-item p {
+		font-family: "PT Sans", Arial, sans-serif;
+		font-weight: bold;
+	}
+
+	.catalog-item:hover {
+	-webkit-box-shadow: 0 0 15px 5px rgba(41, 52, 73, 0.5);
+	-moz-box-shadow: 0 0 15px 5px rgba(41, 52, 73, 0.5);
+	-ms-box-shadow: 0 0 15px 5px rgba(41, 52, 73, 0.5);
+	-o-box-shadow: 0 0 15px 5px rgba(41, 52, 73, 0.5);
+	box-shadow: 0 0 15px 5px rgba(41, 52, 73, 0.5);
+	}
+
+.item-name {
+	margin: 0;
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	line-height: 20px;
+	padding: 0 15px 10px;
+}
+
+.old-price {
+	margin: 0;
+	text-align: center;
+	font-size: 17px;
+	line-height: 18px;
+	text-decoration: line-through;
+	color: #999999;
+}
+
+.price {
+	position: absolute;
+	display: block;
+	text-align: center;
+	font-size: 17px;
+	line-height: 18px;
+	width: 122px;
+	height: 38px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #ee3643;
+	color: #fff;
+	padding: 10px 0;
+	padding-left: 14px;
+	border-radius: 3px 0 0 3px;
+	bottom: 20px;
+	margin: 0;
+	left: 50%;
+	margin-left: -67px;
+}
+
+	.price:after {
+		display: block;
+		position: absolute;
+		content: "";
+		width: 0;
+		height: 0;
+		border: 19px solid transparent;
+		border-left: 19px solid #ee3643;
+		right: -37px;
+		top: 0;
+	}
 
 .item-company {
 	float: left;
