@@ -12,8 +12,8 @@ body {
 
 h2 {
 	font-size: 30px;
-	font-weight: bold;
 	line-height: 24px;
+	text-transform: uppercase;
 }
 
 h3 {
@@ -746,22 +746,102 @@ footer {
 	opacity: .4;
 }
 
+.popular {
+	margin-bottom: 65px;
+}
 
 .services-features {
 	background-color: #f2f6f8;
 }
 
-	.features-left {
-		padding: 0;
+	.services-features h2 {
+		display: block;
+		font-weight: normal;
 		margin: 0;
-		float: left;
-		width: 240px;
+		padding-top: 65px;
+		margin-bottom: 30px;
 	}
 
-	.features-right {
-		float: right;
-		width: 700px;
+	.services-features p {
+		display: block;
+		width: 400px;
+		font-family: 'PT Sans', Arial, sans-serif;
+		font-size: 13px;
+		line-height: 24px;
+		margin: 0;
+		margin-bottom: 70px;
 	}
+
+.features-left {
+	padding: 0;
+	margin: 0;
+	float: left;
+	width: 240px;
+	list-style-type: none;
+}
+
+.features-button {
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #32425c;
+	color: #fff;
+	font-size: 21px;
+	line-height: 30px;
+	font-weight: bold;
+	border-bottom: 1px solid #293449;
+	border-top: 1px solid #405069;
+	height: 61px;
+	padding: 15px 23px;
+}
+
+	.features-button:hover {
+		background-color: #293449;
+		cursor: pointer;
+	}
+
+.features-button-active {
+	color: #32425c;
+	background-color: #fff;
+	border: none;
+}
+
+	.features-button-active:hover {
+		cursor: auto;
+		background-color: #fff;
+	}
+
+	.separator {
+		position: relative;	
+		z-index: 2;
+		right: 10px;	
+		bottom: 40px;
+	}
+
+.features-right {
+	float: right;
+	width: 620px;
+}
+
+	.features-right h2 {
+		padding-top: 0;
+		margin: 0;
+		font-size: 36px;
+		line-height: 24px;
+		color: #32425c;
+	}
+
+	.features-right p {
+		margin-top: 35px;
+		display: block;
+		width: 275px;
+	}
+
+.features {
+	padding-bottom: 10px;
+	background: url(../img/car.png) no-repeat right;
+}
 
 .company-description {
 	float: left;
