@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="catalog">
 
 <!-- Хедер поделённый на верхнее меню и кнопки навигации -->
 	<header class="main-header">
@@ -14,7 +14,7 @@
 			<div class="container clearfix">
 				<div class="top-header-left clearfix">
 					<a href="index.html" class="link-techmarket">Техномарт</a>
-					<input type="text" name="header-search" placeholder="Поиск">
+					<input type="text" class="header-search" name="header-search" placeholder="Поиск">
 				</div>
 				<div class="top-header-right clearfix">
 					<a href="#">Закладки: 0</a>
@@ -32,7 +32,7 @@
 						<p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 					</div>
 					<div class="header-profile"> <!-- Отличие от главной страницы - профиль! -->
-						<div class="header-profile-name">Равшан Джамшутович</div>
+						<a href="#" class="header-profile-name">Равшан Джамшутович</a>
 						<div class="header-profile-link clearfix">
 							<a href="#">Мои заказы</a>
 							<a href="#">Личный кабинет</a>
@@ -62,7 +62,7 @@
 		</ul>
 		<h2 class="catalog-name">Перфораторы</h2>
 		<form class="catalog-filter" action="#" method="get">
-			<p>Фильтр</p>
+			<p>Фильтр:</p>
 			<fieldset class="filterbar">
 				<legend>Цена:</legend>	
 				<div class="range">
@@ -72,7 +72,7 @@
 					<div class="toggle min-toggle"></div>
           <div class="toggle max-toggle"></div>
 				</div>
-				<div class="wrapper-input">
+				<div class="wrapper-input clearfix">
 					<input class="input-min" name="input-min" type="text" value="0">
 					<input class="input-max" name="input-max" type="text" value="30 000">
 				</div>
@@ -97,6 +97,7 @@
 				<input type="radio" name="radio" id="radio2">
 				<label for="radio2">Сетевые</label>
 			</fieldset>
+			<button type="submit">Показать</button>
 		</form>
 		<div class="catalog-right">
 			<div class="search-filter clearfix"> 
