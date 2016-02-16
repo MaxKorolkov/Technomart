@@ -1,3 +1,84 @@
+@charset "UTF-8";
+
+ @font-face {
+  font-family: 'symbols-technomart';
+  src: url('../font/symbols-technomart.eot?22619757');
+  src: url('../font/symbols-technomart.eot?22619757#iefix') format('embedded-opentype'),
+       url('../font/symbols-technomart.woff?22619757') format('woff'),
+       url('../font/symbols-technomart.ttf?22619757') format('truetype'),
+       url('../font/symbols-technomart.svg?22619757#symbols-technomart') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'symbols-technomart';
+    src: url('../font/symbols-technomart.svg?22619757#symbols-technomart') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "symbols-technomart";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-left:before { content: '\3c'; } /* '&lt;' */
+.icon-right:before { content: '\3e'; } /* '&gt;' */
+.icon-basket:before { content: '\62'; } /* 'b' */
+.icon-facebook:before { content: '\66'; } /* 'f' */
+.icon-twitter:before { content: '\74'; } /* 't' */
+.icon-vk:before { content: '\76'; } /* 'v' */
+.icon-up:before { content: '\2c4'; } /* '˄' */
+.icon-down:before { content: '\2c5'; } /* '˅' */
+.icon-left-big:before { content: '\2190'; } /* '←' */
+.icon-right-big:before { content: '\2192'; } /* '→' */
+.icon-login:before { content: '\2386'; } /* '⎆' */
+.icon-logout:before { content: '\241b'; } /* '␛' */
+.icon-up-dir:before { content: '\25b2'; } /* '▲' */
+.icon-down-dir:before { content: '\25bc'; } /* '▼' */
+.icon-circle:before { content: '\25cb'; } /* '○' */
+.icon-circle-dot:before { content: '\25cf'; } /* '●' */
+.icon-star:before { content: '\2605'; } /* '★' */s
+.icon-check-off:before { content: '\2610'; } /* '☐' */
+.icon-check-on:before { content: '\2611'; } /* '☑' */
+.icon-youtube:before { content: '\f39e'; } /* '' */
+.icon-home:before { content: '\1f3e0'; } /* '\1f3e0' */
+.icon-user:before { content: '\1f468'; } /* '\1f468' */
+.icon-phone:before { content: '\1f4de'; } /* '\1f4de' */
+.icon-instagramm:before { content: '\1f4f7'; } /* '\1f4f7' */
+.icon-search:before { content: '\1f50d'; } /* '\1f50d' */
+.icon-bookmark:before { content: '\1f516'; } /* '\1f516' */
+
 body {
 	font-family: "Cuprum", Arial, sans-serif;
 	font-size: 14px;
@@ -48,6 +129,7 @@ h4 {
 	}
 
 .top-header-left {
+	position: relative;
 	float: left;
 	width: 490px;
 }
@@ -104,6 +186,22 @@ h4 {
 	background-color: #fff;
 	color: #000;
 	outline: none;
+}
+
+label[class="icon-search"]:before {
+	font-size: 17px;
+	position: absolute;
+	top: 12px;
+	left: 245px;
+	color: #81868f;
+}
+
+.header-search:hover + label[class="icon-search"]:before {
+	color: #fff;
+}
+
+.header-search:focus + label[class="icon-search"]:before {
+	color: #ee3643;
 }
 
 .top-header-right {
@@ -471,6 +569,7 @@ footer {
 /*************************************************/
 
 .category-item {
+	position: relative;
 	width: 300px;
 	float: left;
 	min-height: 123px;
@@ -481,6 +580,7 @@ footer {
 	box-sizing: border-box;
 	padding: 20px 23px 12px;
 	background-color: #f6b22d;
+	overflow: hidden;
 }
 
 .category-item:nth-of-type(3n){
@@ -499,6 +599,26 @@ footer {
 		font-weight: bold;
 		margin-bottom: 18px;
 	}
+
+.new-element:after {
+	position: absolute;
+	display: block;
+	content:'new';
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	font-size: 16px;
+	height: 28px;
+	width: 85px;
+	background: #ee3643;
+	color: #fff;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: 3px;
+	transform: rotate(45deg);
+	top: 7px;
+	right: -21px;
+}
 
 .btn {
 	display: block;
@@ -660,6 +780,7 @@ footer {
 	min-height: 316px;
 	border: 1px solid #e5e5e5;
  	margin-right: 20px;
+ 	overflow: hidden;
 }
 
 .catalog-item:nth-child(4n) {
@@ -1055,6 +1176,51 @@ footer {
 	text-transform: uppercase;
 	margin-bottom: 18px;
 }
+
+.range {
+	position: relative;
+	background: #f7f3ec;
+	height: 80px;
+	margin-bottom: 9px;
+	padding-top: 39px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+	.range .scale {
+		height: 2px;
+		width: 170px;
+		background: #d7dcde;
+		margin-left: 26px;
+	}
+
+	.range .scale .bar {
+		height: 2px;
+		width: 142px;
+		background: #00ca74;
+	}
+
+	.range .toggle {
+		position: absolute;
+		width: 4px;
+		height: 4px;
+		background: #ababab;
+		border: 8px solid #fff;
+		border-radius: 50%;
+		top: 30px;
+		left: 20px;
+		box-shadow: 0 2px 1px 0 #ababab;
+	}
+
+	.range .max-toggle {
+		left: 162px;
+	}
+
+	.range .toggle:hover {
+		cursor: pointer;
+		background: #00ca74;
+	}
 
 .wrapper-input input{
 	position: relative;
