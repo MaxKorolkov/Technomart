@@ -492,7 +492,7 @@ a.menu-header {
 	}
 
 	.catalog .main-header {
-		margin-bottom: 0;
+		margin-bottom: 23px;
 	}
 
 /*************************************************/
@@ -1234,7 +1234,7 @@ footer {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	margin-bottom: 55px;
+	margin-bottom: 22px;
 }
 
 	.breadcrumbs li {
@@ -1252,6 +1252,16 @@ footer {
 		color: #000;
 	}
 
+	.breadcrumbs li:first-of-type a {
+		font-size: 0;
+	}
+
+	.breadcrumbs li:first-of-type a:before {
+		font-size: 16px;
+		position: absolute;
+		color: #ced2d8;
+	}
+
 	.breadcrumbs a:after {
 		position: absolute;
 		display: block;
@@ -1265,12 +1275,16 @@ footer {
 		transform: rotate(-45deg);
 	}
 
+	.breadcrumbs li:first-of-type a:after {
+		right: -30px;
+		top: -8px;
+	}
+
 .catalog-name {
 	background-color: #f2f6f8;
 	color: #32425c;
-	margin: 0;
-	margin-left: 30px;
-	margin-bottom: 55px;
+	padding: 30px;
+	margin-bottom: 20px;
 }
 
 .catalog-filter {
@@ -1547,6 +1561,30 @@ input[type="checkbox"]:disabled + label:before, input[type="radio"]:disabled + l
 .arrows {
 	float: right;
 	width: 60px;
+	font-size: 0;
+}
+
+.arrows a {
+	position: relative;
+	color: #c6c2bd;
+}
+
+.arrows a:before {
+	font-size: 23px;
+	text-decoration: none;
+	position: absolute;
+}
+
+.arrows a:hover:before {
+	color: #000;
+}
+
+.arrows a:active:before {
+	color: #ee3643;
+}
+
+.arrows a:last-of-type:before {
+	left: 30px;
 }
 
 .catalog .catalog-item:nth-child(4n) {
