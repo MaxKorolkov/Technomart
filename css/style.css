@@ -1897,10 +1897,6 @@ input[type="checkbox"]:disabled + label:before, input[type="radio"]:disabled + l
 	-ms-box-shadow: 0 20px 40px 0 rgba(0, 1, 1, .75);
 	-o-box-shadow: 0 20px 40px 0 rgba(0, 1, 1, .75);
 	box-shadow: 0 20px 40px 0 rgba(0, 1, 1, .75);
-}
-
-.modal-content-show {
-	display: block;
 	-webkit-animation: bounce 0.6s;
 	animation: bounce 0.6s;
 }
@@ -2112,4 +2108,6 @@ label[for="textarea1"] {
 	-ms-box-shadow: 0 20px 40px 0 rgba(0, 1, 1, .75);
 	-o-box-shadow: 0 20px 40px 0 rgba(0, 1, 1, .75);
 	box-shadow: 0 20px 40px 0 rgba(0, 1, 1, .75);
+	-webkit-animation: bounce 0.6s;
+	animation: bounce 0.6s;
 }
